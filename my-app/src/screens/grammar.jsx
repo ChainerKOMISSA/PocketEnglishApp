@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   box : {
     width : '100%',
-    height : '40%',
+    height : '30%',
     backgroundColor:'#0552AC',
     borderBottomRightRadius : 30,
     borderBottomLeftRadius : 30
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     color : '#fff',
     fontSize : 22,
     marginLeft : 20,
-    marginTop : 100
+    marginTop : 20
   },
   cardcontainer : {
     flexDirection : 'row',

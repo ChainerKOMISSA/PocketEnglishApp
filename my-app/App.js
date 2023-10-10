@@ -1,15 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Register from './src/screens/register';
-import Login from './src/screens/login';
-import Menu from './src/screens/menu';
-import Grammar from './src/screens/grammar';
-import Usertest from './src/screens/usertest';
+import Irregularverbs from './src/screens/irregularverbs';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Grammar/>
+      <Irregularverbs/>
     </View>
   );
 }

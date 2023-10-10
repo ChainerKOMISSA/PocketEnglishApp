@@ -76,6 +76,9 @@ const Menu = () => {
       <View style={styles.yellow}>
         <Text style={styles.textebtnyellow}>Quiz</Text>
       </View>
+      <View style={styles.blue}>
+        <Text style={styles.textebtnblue}>Dictionary</Text>
+      </View>
       </ScrollView>
     </View>
   )

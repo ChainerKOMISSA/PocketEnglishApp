@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const db = mysql.createConnection({
     host : 'localhost',
@@ -21,7 +21,7 @@ db.connect((err) => {
 
 //Endpoint pour récupérer tous les utilisateurs (test de la base de données)
 app.get('/users', (req, res) => {
-    const query = 'SELECT * FROM users';
+    const query = 'SELECT * FROM user';
     db.query(query, (err, results) => {
         if(err){
             console.error('Erreur lors de la récupération des utilisateurs :' + err.message);

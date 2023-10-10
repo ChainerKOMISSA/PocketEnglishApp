@@ -4,6 +4,7 @@ import Register from './src/screens/register';
 import Login from './src/screens/login';
 import Menu from './src/screens/menu';
 import Grammar from './src/screens/grammar';
+import Usertest from './src/screens/usertest';
 
 export default function App() {
   return (

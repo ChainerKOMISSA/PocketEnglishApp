@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     margin : 20,
     backgroundColor:'#0552AC',
     borderRadius: 20,
-    marginTop : 90
+    marginTop : 10
   },
   title : {
     color : '#fff',
@@ -53,8 +53,37 @@ const styles = StyleSheet.create({
     color : '#fff',
     padding : 8,
   },
-  searchbox : {},
-  searchicon : {}
+  searchbox : {
+    marginLeft : 270,
+    marginTop : 90,
+    backgroundColor : '#D9D9D9',
+    width : 40,
+    height : 40,
+    borderRadius : 10,
+  },
+  searchicon : {
+    width : 20,
+    height : 20,
+    color : '',
+    margin : 11
+  },
+  backbox : {
+    marginLeft : 15,
+    marginTop : 90,
+    backgroundColor : '#D9D9D9',
+    width : 40,
+    height : 40,
+    borderRadius : 10,
+  },
+  backicon : {
+    width : 20,
+    height : 20,
+    color : '',
+    margin : 11
+  },
+  row : {
+    flexDirection:'row' ,
+  }
 })
 
 const Irregularverbs = () => {
@@ -134,14 +163,26 @@ const Irregularverbs = () => {
     }
   ]
   const renderItem =  ({item}) => 
-
   <View style={styles.verb}>
     <Text style={styles.verbtitle}>{item.verb}</Text>
     <Text style={styles.verbfrench}>{item.french}</Text> 
   </View>
   return (
     <View style={styles.container}>
-      <View><Image/></View>
+      <View style={styles.row}>
+        <View style={styles.backbox}>
+        <Image
+              source={require('../../assets/x.png')}
+              style={styles.backicon}
+        />
+        </View>
+        <View style={styles.searchbox}>
+        <Image
+              source={require('../../assets/search.png')}
+              style={styles.searchicon}
+        />
+        </View>
+      </View>
       <View style={styles.box}>
         <Text style={styles.title}>Irregular</Text>
         <Text style={styles.subtitle}>verbs</Text>

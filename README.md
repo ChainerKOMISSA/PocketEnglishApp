@@ -3,4 +3,4 @@ Application d'apprentissage de la langue anglaise à travers des jeux interactif
 
 
 Environnement technique : 
-React Native, NodeJS, Express JS, Axios, Mysql, Typescript
+React Native, NodeJS, Express JS, Fetch, Mysql, Typescript

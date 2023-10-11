@@ -32,6 +32,20 @@ app.get('/users', (req, res) => {
     });
 });
 
+//Endpoint pour récupérer la liste des verbes irréguliers
+app.get('/verbes', (req, res) => {
+    const query = 'SELECT * FROM verb';
+    db.query(query, (err, results) => {
+        if(err) {
+            console.error('Erreur lors de la récupération des verbes : ' + err.message);
+            res.status(500).json({error : 'Erreur lors de la récupération des verbes'});
+        } else {
+            res.json(results);
+        }
+    });
+});
+
+
 app.listen(port, () => {
     console.log(`Serveur écoutant sur le port ${port}`);
 });

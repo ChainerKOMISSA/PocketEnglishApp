@@ -89,18 +89,18 @@ const styles = StyleSheet.create({
 const Irregularverbs = () => {
   const [verbs, setVerbs] = useState([]);
 
-  {/*useEffect(() => {
-    fetch('https://zylalabs.com/api/738/english+conjugation+api/451/verb+conjugation')
-    .then((response) => response.json())
-    .then((data) => {
-      setVerbs(data.verbs);
+  useEffect(() => {
+    fetch('http://192.168.1.72:3001/verbes')
+    .then(response => response.json())
+    .then(data => {
+      setVerbs(data)
     })
     .catch((error) => {
-      console.error('Erreur lors de la récupération des verbes ' + error);
+      console.error('Erreur lors de la récupération des verbes ' + error.message);
   });
-  }, []);*/}
+  }, []);
   
-  let data = [
+  /*let data = [
     {
       verb : "To arise",
       v1 : "arose",
@@ -161,36 +161,37 @@ const Irregularverbs = () => {
       v2 : "been",
       french : 'se lever'
     }
-  ]
-  const renderItem =  ({item}) => 
-  <View style={styles.verb}>
-    <Text style={styles.verbtitle}>{item.verb}</Text>
-    <Text style={styles.verbfrench}>{item.french}</Text> 
-  </View>
+  ]*/
+  
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-        <View style={styles.backbox}>
+        <Pressable style={styles.backbox}>
         <Image
               source={require('../../assets/x.png')}
               style={styles.backicon}
         />
-        </View>
-        <View style={styles.searchbox}>
+        </Pressable>
+        <Pressable style={styles.searchbox}>
         <Image
               source={require('../../assets/search.png')}
               style={styles.searchicon}
         />
-        </View>
+        </Pressable>
       </View>
       <View style={styles.box}>
         <Text style={styles.title}>Irregular</Text>
         <Text style={styles.subtitle}>verbs</Text>
       </View>
       <FlatList
-        data = {data}
-        keyExtractor={(item) => {return item.id}}
-        renderItem={renderItem}
+        data = {verbs}
+        keyExtractor={(item) => {return item.id.toString()}}
+        renderItem={({item}) => (
+          <View style={styles.verb}>
+            <Text style={styles.verbtitle}>{item.title}</Text>
+            <Text style={styles.verbfrench}>{item.french}</Text> 
+          </View>
+        )}
         numColumns={1}
       />
     </View>

@@ -100,68 +100,6 @@ const Irregularverbs = () => {
   });
   }, []);
   
-  /*let data = [
-    {
-      verb : "To arise",
-      v1 : "arose",
-      v2 : "arisen",
-      french : 'se lever'
-    },
-    {
-      verb : "To be",
-      v1 : "was / were",
-      v2 : "been",
-      french : 'être'
-    },
-    {
-      verb : "To beat",
-      v1 : "beat",
-      v2 : "beaten",
-      french : 'battre'
-    },
-    {
-      verb : "To become",
-      v1 : "became",
-      v2 : "become",
-      french : 'devenir'
-    },
-    {
-      verb : "To begin",
-      v1 : "was / were",
-      v2 : "been",
-      french : 'commencer / débuter'
-    },
-    {
-      verb : "To arise",
-      v1 : "was / were",
-      v2 : "been",
-      french : 'se lever'
-    },
-    {
-      verb : "To beat",
-      v1 : "beat",
-      v2 : "beaten",
-      french : 'battre'
-    },
-    {
-      verb : "To become",
-      v1 : "became",
-      v2 : "become",
-      french : 'devenir'
-    },
-    {
-      verb : "To begin",
-      v1 : "was / were",
-      v2 : "been",
-      french : 'commencer / débuter'
-    },
-    {
-      verb : "To arise",
-      v1 : "was / were",
-      v2 : "been",
-      french : 'se lever'
-    }
-  ]*/
   
   return (
     <View style={styles.container}>

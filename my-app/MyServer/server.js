@@ -45,6 +45,19 @@ app.get('/verbes', (req, res) => {
     });
 });
 
+//Endpoint pour récupérer les catégories en vocabulaire
+app.get('/categories', (req, res) => {
+    const query = 'SELECT * FROM vocabulary';
+    db.query(query, (err, results) => {
+        if(err) {
+            console.error('Erreur lors de la récupération des catégories : ' + err.message);
+            res.status(500).json({error : 'Erreur lors de la récupération des catégories'});
+        } else {
+            res.json(results);
+        }
+    });
+});
+
 
 app.listen(port, () => {
     console.log(`Serveur écoutant sur le port ${port}`);

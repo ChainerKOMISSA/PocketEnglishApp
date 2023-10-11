@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Irregularverbs from './src/screens/irregularverbs';
+import Vocabulary from './src/screens/vocabulary';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Irregularverbs/>
+      <Vocabulary/>
     </View>
   );
 }

@@ -2,5 +2,10 @@
 Application d'apprentissage de la langue anglaise à travers des jeux interactifs et des quiz
 
 
-Environnement technique : 
-React Native, NodeJS, Express JS, Fetch, Mysql, Typescript
+Frontend : 
+React Native, Typescript
+
+Backend : 
+Express JS, Fetch
+
+Base de données : Mysql

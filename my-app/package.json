@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@react-navigation/native-stack": "^6.9.14",
     "@types/react": "~18.2.14",
     "axios": "^1.5.1",
     "expo": "~49.0.13",

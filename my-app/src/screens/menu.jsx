@@ -1,6 +1,9 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, View, Pressable} from 'react-native'
 import React from 'react'
 import { MenuOutlined, SearchOutlined } from '@ant-design/icons';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 const styles = StyleSheet.create({
   container : {
@@ -51,34 +54,37 @@ const styles = StyleSheet.create({
   },
 })
 
-const Menu = () => {
+const Stack = createNativeStackNavigator();
+
+
+const Menu = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.row}>
+      {/*<View style={styles.row}>
           <Text style={styles.texte}>Menu</Text>
-      </View>
+      </View>*/}
       <ScrollView>
-      <View style={styles.blue}>
+      <Pressable style={styles.blue} onPress={() => navigation.navigate('irregularverbs')}>
         <Text style={styles.textebtnblue}>Irregular Verbs</Text>
-      </View>
-      <View style={styles.yellow}>
+      </Pressable>
+      <Pressable style={styles.yellow} onPress={() => navigation.navigate('vocabulary')}>
         <Text style={styles.textebtnyellow}>Vocabulary</Text>
-      </View>
-      <View style={styles.blue}>
+      </Pressable>
+      <Pressable style={styles.blue} onPress={() => navigation.navigate('grammar')}>
         <Text style={styles.textebtnblue}>Grammar</Text>
-      </View>
-      <View style={styles.yellow}>
+      </Pressable>
+      <Pressable style={styles.yellow}>
         <Text style={styles.textebtnyellow}>Jumble words</Text>
-      </View>
-      <View style={styles.blue}>
+      </Pressable>
+      <Pressable style={styles.blue}>
         <Text style={styles.textebtnblue}>General Knowledge</Text>
-      </View>
-      <View style={styles.yellow}>
+      </Pressable>
+      <Pressable style={styles.yellow} onPress={() => navigation.navigate('quiz')}>
         <Text style={styles.textebtnyellow}>Quiz</Text>
-      </View>
-      <View style={styles.blue}>
+      </Pressable>
+      <Pressable style={styles.blue}>
         <Text style={styles.textebtnblue}>Dictionary</Text>
-      </View>
+      </Pressable>
       </ScrollView>
     </View>
   )

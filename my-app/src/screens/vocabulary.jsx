@@ -82,18 +82,6 @@ const styles = StyleSheet.create({
   }
 })
 
-let data = [
-  {
-    id: 1,
-    category : "Synonyms",
-  },
-  {
-    id: 2,
-    category : "Antonyms",
-  }
-]
-
-
 const Vocabulary = () => {
   const [categories, setCategories] = useState([]);
 

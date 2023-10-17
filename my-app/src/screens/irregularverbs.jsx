@@ -1,5 +1,10 @@
 import { View, Text, StyleSheet, FlatList, Pressable, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
+import Config from "react-native-config";
+import { StatusBar } from 'expo-status-bar';
+
+
+Config.API_URL;
 
 const styles = StyleSheet.create({
   container : {
@@ -55,7 +60,7 @@ const styles = StyleSheet.create({
   },
   searchbox : {
     marginLeft : 270,
-    marginTop : 90,
+    marginTop :  70,
     backgroundColor : '#D9D9D9',
     width : 40,
     height : 40,
@@ -69,7 +74,7 @@ const styles = StyleSheet.create({
   },
   backbox : {
     marginLeft : 15,
-    marginTop : 90,
+    marginTop : 70,
     backgroundColor : '#D9D9D9',
     width : 40,
     height : 40,
@@ -86,11 +91,11 @@ const styles = StyleSheet.create({
   }
 })
 
-const Irregularverbs = () => {
+const Irregularverbs = ({navigation}) => {
   const [verbs, setVerbs] = useState([]);
 
   useEffect(() => {
-    fetch('http://192.168.1.72:3001/verbes')
+    fetch('http://192.168.0.140:3001/verbes')
     .then(response => response.json())
     .then(data => {
       setVerbs(data)
@@ -103,8 +108,9 @@ const Irregularverbs = () => {
   
   return (
     <View style={styles.container}>
+      <StatusBar/>
       <View style={styles.row}>
-        <Pressable style={styles.backbox}>
+        <Pressable style={styles.backbox} onPress={() => navigation.goBack()}>
         <Image
               source={require('../../assets/x.png')}
               style={styles.backicon}

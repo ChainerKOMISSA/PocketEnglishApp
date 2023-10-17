@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, ScrollView, FlatList, Image, Button, Pressable } from 'react-native'
 import React from 'react'
 import image1 from '../../assets/parler.png'
+import { StatusBar } from 'expo-status-bar';
+
 
 const styles = StyleSheet.create({
   container: {
@@ -17,19 +19,14 @@ const styles = StyleSheet.create({
   },
   title : {
     color : '#fff',
-    marginTop : 100,
+    marginTop : 20,
     fontSize : 30,
     marginLeft : 20
 
   },
-  subtitle :  {
-    color : '#fff',
-    fontSize : 30,
-    marginLeft : 20
-  },
   texte : {
     color : '#fff',
-    fontSize : 22,
+    fontSize : 18,
     marginLeft : 20,
     marginTop : 20
   },
@@ -72,9 +69,25 @@ const styles = StyleSheet.create({
     color : '#fff',
     padding : 8,
   },
+  backbox : {
+    marginLeft : 15,
+    marginTop : 55,
+    backgroundColor : '#0552AC',
+    width : 40,
+    height : 40,
+    borderRadius : 10,
+  },
+  backicon : {
+    width : 25,
+    height : 25,
+    margin : 8
+  },
+  row : {
+    flexDirection:'row' ,
+  }
 })
 
-const Grammar = () => {
+const Grammar = ({navigation}) => {
   let data = [
     {
       title : 'Active/Passive voice',
@@ -124,9 +137,17 @@ const Grammar = () => {
     </View>
   return (
     <View style={styles.container}>
+      <StatusBar style='light' />
       <View style={styles.box}>
-        <Text style={styles.title}>Grammar</Text>
-        <Text style={styles.subtitle}>section</Text>
+        <View style={styles.row}>
+          <Pressable style={styles.backbox} onPress={() => navigation.goBack()}>
+          <Image
+                source={require('../../assets/arrow-back.png')}
+                style={styles.backicon}
+          />
+          </Pressable>
+        </View>
+        <Text style={styles.title}>Grammar section</Text>
         <Text style={styles.texte}>Select a section</Text>
       </View>
      <FlatList

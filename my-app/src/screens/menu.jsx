@@ -1,7 +1,5 @@
 import { Image, ScrollView, StyleSheet, Text, View, Pressable} from 'react-native'
 import React from 'react'
-import { MenuOutlined, SearchOutlined } from '@ant-design/icons';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
@@ -54,8 +52,6 @@ const styles = StyleSheet.create({
   },
 })
 
-const Stack = createNativeStackNavigator();
-
 
 const Menu = ({ navigation }) => {
   return (
@@ -64,13 +60,13 @@ const Menu = ({ navigation }) => {
           <Text style={styles.texte}>Menu</Text>
       </View>*/}
       <ScrollView>
-      <Pressable style={styles.blue} onPress={() => navigation.navigate('irregularverbs')}>
+      <Pressable style={styles.blue} onPress={() => navigation.navigate('Irregularverbs')}>
         <Text style={styles.textebtnblue}>Irregular Verbs</Text>
       </Pressable>
-      <Pressable style={styles.yellow} onPress={() => navigation.navigate('vocabulary')}>
+      <Pressable style={styles.yellow} onPress={() => navigation.navigate('Vocabulary')}>
         <Text style={styles.textebtnyellow}>Vocabulary</Text>
       </Pressable>
-      <Pressable style={styles.blue} onPress={() => navigation.navigate('grammar')}>
+      <Pressable style={styles.blue} onPress={() => navigation.navigate('Grammar')}>
         <Text style={styles.textebtnblue}>Grammar</Text>
       </Pressable>
       <Pressable style={styles.yellow}>
@@ -79,7 +75,7 @@ const Menu = ({ navigation }) => {
       <Pressable style={styles.blue}>
         <Text style={styles.textebtnblue}>General Knowledge</Text>
       </Pressable>
-      <Pressable style={styles.yellow} onPress={() => navigation.navigate('quiz')}>
+      <Pressable style={styles.yellow} onPress={() => navigation.navigate('Quiz')}>
         <Text style={styles.textebtnyellow}>Quiz</Text>
       </Pressable>
       <Pressable style={styles.blue}>

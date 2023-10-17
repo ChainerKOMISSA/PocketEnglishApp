@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, ScrollView, FlatList, Image, Button, Pressable } from 'react-native'
 import React from 'react'
 import listening from '../../assets/casque.png'
+import { StatusBar } from 'expo-status-bar';
+
 
 
 const styles = StyleSheet.create({
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
   },
   title : {
     color : '#000',
-    marginTop : 100,
+    marginTop : 20,
     fontSize : 30,
     marginLeft : 20
 
@@ -84,10 +86,26 @@ const styles = StyleSheet.create({
   buttontext : {
     color:'#fff', 
     paddingLeft : 25
+  },
+  backbox : {
+    marginLeft : 15,
+    marginTop : 55,
+    backgroundColor : '#E3B203',
+    width : 40,
+    height : 40,
+    borderRadius : 10,
+  },
+  backicon : {
+    width : 25,
+    height : 25,
+    margin : 8
+  },
+  row : {
+    flexDirection:'row' ,
   }
 })
 
-const Quiz = () => {
+const Quiz = ({navigation}) => {
   let data = [
     {
       title : 'Listening',
@@ -126,7 +144,16 @@ const Quiz = () => {
     </View>
   return (
     <View style={styles.container}>
+      <StatusBar/>
       <View style={styles.box}>
+      <View style={styles.row}>
+          <Pressable style={styles.backbox} onPress={() => navigation.goBack()}>
+          <Image
+                source={require('../../assets/arrow-back.png')}
+                style={styles.backicon}
+          />
+          </Pressable>
+        </View>
         <Text style={styles.title}>Welcome to the</Text>
         <Text style={styles.subtitle}>QUIZ</Text>
         <Text style={styles.texte}>What do you want to test?</Text>

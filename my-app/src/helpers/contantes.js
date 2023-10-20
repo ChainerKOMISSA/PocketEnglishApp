@@ -1,0 +1,1 @@
+export const HOME_API_URL = 'https://192.168.1.72:8081';

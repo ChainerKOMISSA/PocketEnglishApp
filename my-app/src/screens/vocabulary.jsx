@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, FlatList, Pressable, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'expo-status-bar';
+import { HOME_API_URL } from '../helpers/contantes';
 
 
 const styles = StyleSheet.create({
@@ -62,7 +63,6 @@ const styles = StyleSheet.create({
   searchicon : {
     width : 20,
     height : 20,
-    color : '',
     margin : 11
   },
   backbox : {
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
   backicon : {
     width : 20,
     height : 20,
-    color : '',
     margin : 11
   },
   row : {
@@ -88,10 +87,11 @@ const Vocabulary = ( {navigation}) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://192.168.0.140:3001/categories')
+    fetch(`${HOME_API_URL}/categories`)
     .then(response => response.json())
     .then(data => {
-      setCategories(data)
+      console.log(data)
+      //setCategories(data)
     })
     .catch((error) => {
       console.error('Erreur lors de la récupération des categories ' + error.message);

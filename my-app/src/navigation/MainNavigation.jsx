@@ -9,6 +9,9 @@ import Login from '../screens/login';
 import Register from '../screens/register';
 import Quiz from '../screens/quiz';
 import Vocabulary from '../screens/vocabulary';
+import Dictionary from '../screens/dictionary';
+import Generalk from '../screens/generalk';
+import Jumblewords from '../screens/jumblewords';
 
 
 
@@ -26,6 +29,9 @@ const MainNavigation = () => {
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name='Quiz' component={Quiz} />
         <Stack.Screen name='Vocabulary' component={Vocabulary} />
+        <Stack.Screen name='Dictionary' component={Dictionary} />
+        <Stack.Screen name='Jumblewords' component={Jumblewords} />
+        <Stack.Screen name='Generalk' component={Generalk} />
       </Stack.Navigator>
     </NavigationContainer>
   )

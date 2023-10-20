@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, FlatList, Pressable, Image } from 'react-native
 import React, { useEffect, useState } from 'react'
 import Config from "react-native-config";
 import { StatusBar } from 'expo-status-bar';
+import { HOME_API_URL } from '../helpers/contantes';
 
 
 Config.API_URL;
@@ -95,7 +96,7 @@ const Irregularverbs = ({navigation}) => {
   const [verbs, setVerbs] = useState([]);
 
   useEffect(() => {
-    fetch('http://192.168.0.140:3001/verbes')
+    fetch(`${HOME_API_URL}/verbes`)
     .then(response => response.json())
     .then(data => {
       setVerbs(data)

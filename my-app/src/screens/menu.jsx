@@ -69,16 +69,16 @@ const Menu = ({ navigation }) => {
       <Pressable style={styles.blue} onPress={() => navigation.navigate('Grammar')}>
         <Text style={styles.textebtnblue}>Grammar</Text>
       </Pressable>
-      <Pressable style={styles.yellow}>
+      <Pressable style={styles.yellow} onPress={() => navigation.navigate('Jumblewords')}>
         <Text style={styles.textebtnyellow}>Jumble words</Text>
       </Pressable>
-      <Pressable style={styles.blue}>
+      <Pressable style={styles.blue} onPress={() => navigation.navigate('Generalk')}>
         <Text style={styles.textebtnblue}>General Knowledge</Text>
       </Pressable>
       <Pressable style={styles.yellow} onPress={() => navigation.navigate('Quiz')}>
         <Text style={styles.textebtnyellow}>Quiz</Text>
       </Pressable>
-      <Pressable style={styles.blue}>
+      <Pressable style={styles.blue} onPress={() => navigation.navigate('Dictionary')}>
         <Text style={styles.textebtnblue}>Dictionary</Text>
       </Pressable>
       </ScrollView>

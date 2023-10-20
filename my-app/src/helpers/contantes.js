@@ -1,1 +1,1 @@
-export const HOME_API_URL = 'https://192.168.1.72:8081';
+export const HOME_API_URL = 'http://192.168.1.72:3001';

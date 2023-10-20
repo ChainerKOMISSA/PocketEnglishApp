@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     color : '#000',
     fontSize: 20,
     marginLeft : 20,
-    fontStyle : 'bold',
     margin : 25,
     marginLeft : 30
   },
@@ -90,8 +89,7 @@ const Vocabulary = ( {navigation}) => {
     fetch(`${HOME_API_URL}/categories`)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
-      //setCategories(data)
+      setCategories(data)
     })
     .catch((error) => {
       console.error('Erreur lors de la récupération des categories ' + error.message);

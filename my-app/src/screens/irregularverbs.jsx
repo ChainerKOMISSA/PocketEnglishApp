@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     color : '#000',
     fontSize: 20,
     marginLeft : 20,
-    fontStyle : 'bold',
     marginTop : 5,
   },
   verbfrench : {

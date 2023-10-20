@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
     color : '#0552AC',
     fontSize : 22,
     marginLeft : 10,
-    fontStyle : 'bold',
   },
   carddesc : {
     color : '#525252',

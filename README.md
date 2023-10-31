@@ -7,6 +7,6 @@ React Native, Typescript
 
 
 Backend : 
-Express JS, Fetch
+Node JS, Express JS,
 
 Base de données : Mysql
